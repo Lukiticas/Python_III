@@ -31,7 +31,6 @@ def jogar_Ad():
 
         if chute < 1 or chute >= 100:
             print("Digite um valor valido!!")
-            total_de_tentativas -= 1
             continue 
 
         acertou = numero_secreto == chute
