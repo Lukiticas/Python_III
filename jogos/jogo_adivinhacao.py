@@ -58,7 +58,7 @@ def jogar_Ad():
         if acertou or total_de_tentativas < 1:
             print("************")
             print("fim de jogo")
-            jogar_denovo = int(input("Quer jogar de novo?\n(1)sim (0)nao"))
+            jogar_denovo = int(input("Quer jogar de novo?\n(1)sim (0)nao: "))
             if jogar_denovo == 1:
                 continue
             else:
