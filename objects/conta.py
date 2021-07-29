@@ -17,12 +17,15 @@ class Conta:
     def saque(self, valor):
         self.__saldo -= valor 
         print("Sacado R${} da conta, saldo atual: R${}".format(valor, self.__saldo))
+    
+    def transfere(self, destinatário, valor):
+        self.saque(valor)
+        destinatário.deposita(valor)
+        print("transferido!")
 
 
-conta = Conta(123, "Lucas", 100, 1000)
 
-conta.extrato()
-conta.deposita(200)
-conta.deposita(300)
-conta.saque(200)
-conta.extrato()
+conta = Conta(123, "Lucas", 300, 1000)
+conta1 = Conta(321, "Ni", 100, 1000)
+
+conta.transfere(conta1, 200)
