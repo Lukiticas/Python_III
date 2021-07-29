@@ -15,4 +15,4 @@ if jogo == 1:
     jogo_adivinhacao.jogar_Ad()
 elif jogo == 2:
     print("jogando forca!")
-    jogo_forca.jogar_fc()
+    jogo_forca.jogo_fc()

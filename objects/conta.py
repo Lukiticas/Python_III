@@ -2,21 +2,21 @@ class Conta:
 
     def __init__(self, numero, titular, saldo, limite):
         print("Construindo em...{}".format(self))
-        self.numero = numero
-        self.titular = titular
-        self.saldo = saldo
-        self.limite = limite
+        self.__numero = numero
+        self.__titular = titular
+        self.__saldo = saldo
+        self.__limite = limite
     
     def extrato(self):
-        print("Saldo atual de R${} na conta {} do titular {}".format(self.saldo, self.numero, self.titular))
+        print("Saldo atual de R${} na conta {} do titular {}".format(self.__saldo, self.__numero, self.__titular))
 
     def deposita(self, valor):
-        self.saldo += valor
-        print("adicionado R${} na conta de {}, saldo atual: R${}".format(valor, self.titular, self.saldo))
+        self.__saldo += valor
+        print("adicionado R${} na conta de {}, saldo atual: R${}".format(valor, self.__titular, self.__saldo))
     
     def saque(self, valor):
-        self.saldo -= valor 
-        print("Sacado R${} da conta, saldo atual: R${}".format(valor, self.saldo))
+        self.__saldo -= valor 
+        print("Sacado R${} da conta, saldo atual: R${}".format(valor, self.__saldo))
 
 
 conta = Conta(123, "Lucas", 100, 1000)
