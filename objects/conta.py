@@ -41,9 +41,13 @@ class Conta:
     def get_titular(self):
         return self.__titular
     
-    @property
-    def codigo_banco(self):
-        return self.__codigo_branco
+    @staticmethod
+    def codigo_banco():
+        return '001'
+    
+    @staticmethod
+    def codigos_bancos():
+        return {"BB":'001', 'Caixa':'104', 'Bradesco':'237'}
 
     @property
     def limite(self):
