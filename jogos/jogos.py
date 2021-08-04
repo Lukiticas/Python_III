@@ -12,10 +12,10 @@ while True:
     jogo = int(input("Qual jogo?: "))
 
     if jogo == 1:
-        print("jogando adivinhação!")
+        print("jogando adivinhação!\n")
         jogo_adivinhacao.jogar_Ad()
     elif jogo == 2:
-        print("jogando forca!")
+        print("jogando forca!\n")
         jogo_forca.jogo_fc()
     verifica = input("Digite enter para continuar a jogar, ou digite não para sair:")
     if verifica == '': 
