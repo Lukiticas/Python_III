@@ -15,17 +15,15 @@ def jogo_fc():
 
     while not acertou and not enforcou:
 
-        print("Você chutou essas letras aqui {}".format(letras))
-        
         while True:
             chute = pede_info()
             if chute in letras:
                 print("Você já digitou essa letra, digite outra!!")
                 continue
             elif chute not in letras:
+                print("Você chutou essas letras aqui {}".format(letras))
                 letras.append(chute)
                 break
-
         if chute in palavra_secreta:
             verifica_palavra(chute, letras_acertadas, palavra_secreta)
         else:
